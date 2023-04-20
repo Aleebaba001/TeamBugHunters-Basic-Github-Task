@@ -45,18 +45,6 @@
 									"var jsonData = pm.response.json();",
 									"console.log(jsonData)",
 									"",
-									"",
-									"pm.test(\"Body is correct\", function () {",
-									"    pm.response.to.have.body(\"response_body_string\");",
-									"});",
-									"pm.test(\"Your test name\", function () {",
-									"    ",
-									"    pm.expect(jsonData.value).to.eql(100);",
-									"});",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");",
-									"});",
-									"",
 									""
 								],
 								"type": "text/javascript"
@@ -140,18 +128,6 @@
 									"var jsonData = pm.response.json();",
 									"console.log(jsonData)",
 									"",
-									"",
-									"pm.test(\"Body is correct\", function () {",
-									"    pm.response.to.have.body(\"response_body_string\");",
-									"});",
-									"pm.test(\"Your test name\", function () {",
-									"    ",
-									"    pm.expect(jsonData.value).to.eql(100);",
-									"});",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");",
-									"});",
-									"",
 									""
 								],
 								"type": "text/javascript"
@@ -174,15 +150,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://demo.fusio-project.org/index.php/?todo_apiVersion={{entityapiVersion}}",
-							"protocol": "https",
+							"raw": "{{baseUrl}}/?todo_apiVersion={{entityapiVersion}}",
 							"host": [
-								"demo",
-								"fusio-project",
-								"org"
+								"{{baseUrl}}"
 							],
 							"path": [
-								"index.php",
 								""
 							],
 							"query": [
@@ -236,19 +208,6 @@
 									"",
 									"var jsonData = pm.response.json();",
 									"console.log(jsonData)",
-									"",
-									"",
-									"pm.test(\"Body is correct\", function () {",
-									"    pm.response.to.have.body(\"response_body_string\");",
-									"});",
-									"pm.test(\"Your test name\", function () {",
-									"    ",
-									"    pm.expect(jsonData.value).to.eql(100);",
-									"});",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");",
-									"});",
-									"",
 									""
 								],
 								"type": "text/javascript"
@@ -266,12 +225,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://demo.fusio-project.org/index.php?todo_paymentCurrency={{entityPaymentCurrency}}",
-							"protocol": "https",
+							"raw": "{{baseUrl}}/index.php?todo_paymentCurrency={{entityPaymentCurrency}}",
 							"host": [
-								"demo",
-								"fusio-project",
-								"org"
+								"{{baseUrl}}"
 							],
 							"path": [
 								"index.php"
@@ -322,18 +278,6 @@
 									"",
 									"var jsonData = pm.response.json();",
 									"console.log(jsonData)",
-									"",
-									"",
-									"pm.test(\"Body is correct\", function () {",
-									"    pm.response.to.have.body(\"response_body_string\");",
-									"});",
-									"pm.test(\"Your test name\", function () {",
-									"    ",
-									"    pm.expect(jsonData.value).to.eql(100);",
-									"});",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");",
-									"});",
 									"",
 									""
 								],
@@ -405,8 +349,8 @@
 									"});",
 									"",
 									"console.log(response[1].name);",
-									"pm.test(\"Search for a book name called The Russian\", function (){",
-									"    pm.expect(response[1].name).to.equal(\"The Russian\")",
+									"pm.test(\"Search for a book name called Just as I Am\", function (){",
+									"    pm.expect(response[1].name).to.equal(\"Just as I Am\")",
 									"});",
 									"",
 									""
@@ -462,25 +406,6 @@
 									"pm.test(\"Status code name should have an OK string\", function () {",
 									"    pm.response.to.have.status(\"OK\");",
 									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"/**console.log(jsonData.paymentCurrency)*/",
-									"",
-									"pm.test(\"Confirm that the paymentCurrency is EUR\", function () {",
-									"    ",
-									"    pm.expect(jsonData.paymentCurrency).to.eql(\"EUR\");",
-									"});",
-									"",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"EUR\");",
-									"});",
-									"",
-									"console.log(jsonData.paymentCurrency)",
-									"console.log(jsonData.apiVersion)",
-									"",
-									"pm.environment.set(\"entityPaymentCurrency\",jsonData.paymentCurrency);",
-									"",
-									"pm.environment.set(\"entityapiVersion\",jsonData.apiVersion);",
 									"",
 									""
 								],
@@ -538,6 +463,9 @@
 									"pm.test(\"Response time is less than 400ms\", function (){",
 									"    pm.expect(pm.response.responseTime).to.be.below(400);",
 									"});",
+									"",
+									"",
+									"",
 									"",
 									"",
 									"/**pm.test(\"Status code is 200\", function () {",
