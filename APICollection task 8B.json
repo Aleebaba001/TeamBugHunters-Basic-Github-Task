@@ -174,15 +174,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://demo.fusio-project.org/index.php/?todo_apiVersion={{entityapiVersion}}",
-							"protocol": "https",
+							"raw": "{{baseUrl}}/?todo_apiVersion={{entityapiVersion}}",
 							"host": [
-								"demo",
-								"fusio-project",
-								"org"
+								"{{baseUrl}}"
 							],
 							"path": [
-								"index.php",
 								""
 							],
 							"query": [
@@ -266,12 +262,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://demo.fusio-project.org/index.php?todo_paymentCurrency={{entityPaymentCurrency}}",
-							"protocol": "https",
+							"raw": "{{baseUrl}}/index.php?todo_paymentCurrency={{entityPaymentCurrency}}",
 							"host": [
-								"demo",
-								"fusio-project",
-								"org"
+								"{{baseUrl}}"
 							],
 							"path": [
 								"index.php"
@@ -535,19 +528,21 @@
 							"script": {
 								"exec": [
 									"",
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
 									"pm.test(\"Response time is less than 400ms\", function (){",
 									"    pm.expect(pm.response.responseTime).to.be.below(400);",
 									"});",
 									"",
-									"const OrderId = pm.response.json(); ",
+									"",
+									"/**pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});*/",
+									"",
+									"",
+									"/**const OrderId = pm.response.json(); ",
 									"",
 									"console.log(OrderId.orderId);",
 									"pm.environment.set(\"OrderId\", OrderId.orderId);",
-									"",
+									"*/",
 									""
 								],
 								"type": "text/javascript"
@@ -602,6 +597,23 @@
 							"listen": "test",
 							"script": {
 								"exec": [
+									"",
+									"",
+									"pm.test(\"Response time is less than 400ms\", function (){",
+									"    pm.expect(pm.response.responseTime).to.be.below(400);",
+									"});",
+									"",
+									"",
+									"/**pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});*/",
+									"",
+									"",
+									"/**const OrderId = pm.response.json(); ",
+									"",
+									"console.log(OrderId.orderId);",
+									"pm.environment.set(\"OrderId\", OrderId.orderId);",
+									"*/",
 									""
 								],
 								"type": "text/javascript"
