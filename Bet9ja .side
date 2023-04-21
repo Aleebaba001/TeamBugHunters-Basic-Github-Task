@@ -1,0 +1,195 @@
+{
+  "id": "5f380d51-c008-487e-a47f-ed154be35fcf",
+  "version": "2.0",
+  "name": "Bet9ja ",
+  "url": "https://sports.bet9ja.com",
+  "tests": [{
+    "id": "90cbd19c-7078-4520-bed0-c46b53f9d0a2",
+    "name": "login with invalid email or phone number",
+    "commands": [{
+      "id": "4333d484-f64b-441f-918d-9c74a988cc4e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be7bb7eb-49fe-41b6-8b46-53fa6cdd29a3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c32bd29-e80a-4e9b-b0e1-d8e61c2328f4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn-primary-m",
+      "targets": [
+        ["css=.btn-primary-m", "css:finder"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c02014ea-37a0-4324-88eb-2b2735f3898b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary-m",
+      "targets": [
+        ["css=.btn-primary-m", "css:finder"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2134a39-4c9b-4309-bdeb-02b5b6cfbb0d",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-primary-m",
+      "targets": [
+        ["css=.btn-primary-m", "css:finder"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20667698-8b6c-4d7b-9ede-2a646fc7ae81",
+      "comment": "",
+      "command": "click",
+      "target": "id=wrapper",
+      "targets": [
+        ["id=wrapper", "id"],
+        ["css=#wrapper", "css:finder"],
+        ["xpath=//div[@id='wrapper']", "xpath:attributes"],
+        ["xpath=//div[@id='project']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f6ec800-a351-4dbe-9b79-c1e0e096e645",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary-m",
+      "targets": [
+        ["css=.btn-primary-m", "css:finder"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3efd82e-1f40-4a9a-8df4-9c28d4afa841",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "wizkid@wizkid.com"
+    }, {
+      "id": "5129679a-a4d1-44c2-b15b-1db8a178fbcc",
+      "comment": "",
+      "command": "click",
+      "target": "id=wrapper",
+      "targets": [
+        ["id=wrapper", "id"],
+        ["css=#wrapper", "css:finder"],
+        ["xpath=//div[@id='wrapper']", "xpath:attributes"],
+        ["xpath=//div[@id='project']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8cdf777-ac5d-4752-89ed-68199cac0a63",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary-m",
+      "targets": [
+        ["css=.btn-primary-m", "css:finder"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bb656e6-355a-4fbd-81e2-03de83ee41ce",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7cf7601-b39f-4be8-90ec-b27f6a650394",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "passwordwizkid"
+    }, {
+      "id": "c6cf13b8-5f05-4982-8464-495efaed9393",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary-l",
+      "targets": [
+        ["css=.btn-primary-l", "css:finder"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div[2]/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b92fad20-2054-47aa-a1b8-b5a07457ad6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form",
+      "targets": [
+        ["css=.form", "css:finder"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "147552b9-c395-4e58-a369-dee16e56b7c8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.txt-danger-dark",
+      "targets": [
+        ["css=.txt-danger-dark", "css:finder"],
+        ["xpath=//header[@id='header_item']/div/div/div/div[2]/div[3]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": "Your details weren't recognized."
+    }]
+  }],
+  "suites": [{
+    "id": "e35e569d-659d-42a6-945d-c75cdb1e8ac9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["90cbd19c-7078-4520-bed0-c46b53f9d0a2"]
+  }, {
+    "id": "07692aca-2639-450a-8869-ccaa9935799e",
+    "name": "Bet9ja",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["90cbd19c-7078-4520-bed0-c46b53f9d0a2"]
+  }],
+  "urls": ["https://sports.bet9ja.com/"],
+  "plugins": []
+}
