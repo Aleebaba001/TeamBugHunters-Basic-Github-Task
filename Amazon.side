@@ -1,0 +1,204 @@
+{
+  "id": "552d4ba8-0149-4c30-a72e-9864a05f1436",
+  "version": "2.0",
+  "name": "Amazon",
+  "url": "https://www.amazon.com",
+  "tests": [{
+    "id": "e9e5ca76-8a9f-423a-b8b2-500fbff4d7cf",
+    "name": "login with invalid email or phone number",
+    "commands": [{
+      "id": "8f9a8c41-4b36-4895-a63c-b8f45329bf19",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f5a3c38-f190-4ccc-84bf-1508e8aef9a9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd50bad3-c57a-4670-9d33-94122bae7f26",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav-signin-tooltip .nav-action-inner",
+      "targets": [
+        ["css=#nav-signin-tooltip .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-signin-tooltip']/a/span", "xpath:idRelative"],
+        ["xpath=//div[13]/div[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb4d2f83-e4f0-4cd7-89a0-6be08bdc3409",
+      "comment": "",
+      "command": "click",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a312a091-5f62-491b-b4eb-08e8d0e1c924",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Burnaboy@spaceship.com"
+    }, {
+      "id": "5aa401ca-8640-4d4b-8ce1-61df5b8eaa76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-button-inner > #continue",
+      "targets": [
+        ["css=.a-button-inner > #continue", "css:finder"],
+        ["xpath=//input[@id='continue']", "xpath:attributes"],
+        ["xpath=//span[@id='continue']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e829376c-9919-4068-ae7a-a9940723dfd3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#auth-error-message-box > .a-box-inner",
+      "targets": [
+        ["css=#auth-error-message-box > .a-box-inner", "css:finder"],
+        ["xpath=//div[@id='auth-error-message-box']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34e1c5fc-8176-4e32-9b31-7a44fb7a40b5",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.a-list-item",
+      "targets": [
+        ["css=.a-list-item", "css:finder"],
+        ["xpath=//div[@id='auth-error-message-box']/div/div/ul/li/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'We cannot find an account with that email address')]", "xpath:innerText"]
+      ],
+      "value": "We cannot find an account with that email address"
+    }, {
+      "id": "b638ad5e-9f8d-4c8b-8480-56d9dad040fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5058fe89-044c-447d-ae68-19ae9038ce04",
+    "name": "login with the email or phone number field empty",
+    "commands": [{
+      "id": "d6a062a3-ad18-4048-ac6c-f8d1cb108322",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af403db5-f37e-4a09-94ac-1e101bf33bb0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c2ff373-3fc3-481a-aa69-f40be8e7ab1d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav-signin-tooltip .nav-action-inner",
+      "targets": [
+        ["css=#nav-signin-tooltip .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-signin-tooltip']/a/span", "xpath:idRelative"],
+        ["xpath=//div[13]/div[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9095ab69-7d0b-41e5-aacc-4859ff2cf00a",
+      "comment": "",
+      "command": "click",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "970d68aa-d9e8-4d37-b18f-447c93c4ce4a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-button-inner > #continue",
+      "targets": [
+        ["css=.a-button-inner > #continue", "css:finder"],
+        ["xpath=//input[@id='continue']", "xpath:attributes"],
+        ["xpath=//span[@id='continue']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1436f998-19e4-404e-8c5f-3d3c46806f91",
+      "comment": "",
+      "command": "click",
+      "target": "css=#auth-email-missing-alert > .a-box-inner",
+      "targets": [
+        ["css=#auth-email-missing-alert > .a-box-inner", "css:finder"],
+        ["xpath=//div[@id='auth-email-missing-alert']/div", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92ff4eeb-7de7-4f1c-b499-0d4bb15bd56f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.a-alert-content:nth-child(2)",
+      "targets": [
+        ["css=.a-alert-content:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='auth-email-missing-alert']/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": "Enter your email or mobile phone number"
+    }]
+  }],
+  "suites": [{
+    "id": "caaf37f8-3f1e-4439-9403-3c632472a1ad",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "754d79cb-0581-4a35-b1b5-68deb88c0792",
+    "name": "Amazon",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e9e5ca76-8a9f-423a-b8b2-500fbff4d7cf", "5058fe89-044c-447d-ae68-19ae9038ce04"]
+  }],
+  "urls": ["https://www.jumia.com.ng/", "https://www.amazon.com/"],
+  "plugins": []
+}
