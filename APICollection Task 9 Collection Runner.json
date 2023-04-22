@@ -1,1033 +1,542 @@
 {
-	"info": {
-		"_postman_id": "edf4a030-3477-4666-8417-295fded25a4b",
-		"name": "APICollection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "25411981"
-	},
-	"item": [
+	"id": "727a3459-bece-4d85-b118-a749cf08ff54",
+	"name": "APICollection",
+	"timestamp": "2023-04-22T19:35:20.867Z",
+	"collection_id": "25411981-edf4a030-3477-4666-8417-295fded25a4b",
+	"folder_id": 0,
+	"environment_id": "25411981-2d95d9f8-9db3-44ad-b9c4-ea9b2288fa3d",
+	"totalPass": 24,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-04-22T19:35:07.368Z",
+	"totalFail": 0,
+	"results": [
 		{
+			"id": "1c52d635-6c94-4d6d-b2e9-56ffa9694833",
 			"name": "Get All Todo Entries",
-			"item": [
+			"url": "https://demo.fusio-project.org/index.php?=/todo/todo",
+			"time": 1952,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code name should have an OK string": true,
+				"Confirm that the paymentCurrency is EUR": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name should have an OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Confirm that the paymentCurrency is EUR": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1952
+			],
+			"allTests": [
 				{
-					"name": "Get All Todo Entries",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code should be 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"pm.test(\"Status code name should have an OK string\", function () {",
-									"    pm.response.to.have.status(\"OK\");",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"console.log(jsonData.paymentCurrency)",
-									"",
-									"pm.test(\"Confirm that the paymentCurrency is EUR\", function () {",
-									"    ",
-									"    pm.expect(jsonData.paymentCurrency).to.eql(\"EUR\");",
-									"});",
-									"",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"EUR\");",
-									"});",
-									"",
-									"console.log(jsonData.paymentCurrency)",
-									"console.log(jsonData.apiVersion)",
-									"",
-									"pm.environment.set(\"entityPaymentCurrency\",jsonData.paymentCurrency);",
-									"",
-									"pm.environment.set(\"entityapiVersion\",jsonData.apiVersion);",
-									"",
-									"var jsonData = pm.response.json();",
-									"console.log(jsonData)",
-									"",
-									""
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									"pm.environment.set(\"entity\", \"variable_value\");"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/todo",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"todo"
-							]
-						}
-					},
-					"response": []
+					"Status code should be 200": true,
+					"Status code name should have an OK string": true,
+					"Confirm that the paymentCurrency is EUR": true,
+					"Body matches string": true
 				}
 			]
 		},
 		{
+			"id": "12386378-b1eb-4e58-8127-22c74f6cf737",
 			"name": "Get All Entries",
-			"item": [
+			"url": "https://demo.fusio-project.org/index.php?=/todo/?todo_apiVersion=6.3.8.0",
+			"time": 760,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code name should have an OK string": true,
+				"Confirm that the paymentCurrency is EUR": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name should have an OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Confirm that the paymentCurrency is EUR": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				760
+			],
+			"allTests": [
 				{
-					"name": "Get All Entries",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code should be 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"pm.test(\"Status code name should have an OK string\", function () {",
-									"    pm.response.to.have.status(\"OK\");",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"console.log(jsonData.paymentCurrency)",
-									"",
-									"pm.test(\"Confirm that the paymentCurrency is EUR\", function () {",
-									"    ",
-									"    pm.expect(jsonData.paymentCurrency).to.eql(\"EUR\");",
-									"});",
-									"",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"EUR\");",
-									"});",
-									"",
-									"console.log(jsonData.paymentCurrency)",
-									"console.log(jsonData.apiVersion)",
-									"",
-									"pm.environment.set(\"entityPaymentCurrency\",jsonData.paymentCurrency);",
-									"",
-									"pm.environment.set(\"entityapiVersion\",jsonData.apiVersion);",
-									"",
-									"var jsonData = pm.response.json();",
-									"console.log(jsonData)",
-									"",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/?todo_apiVersion={{entityapiVersion}}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								""
-							],
-							"query": [
-								{
-									"key": "todo_apiVersion",
-									"value": "{{entityapiVersion}}"
-								}
-							]
-						},
-						"description": "https://demo.fusio-project.org/index.php/"
-					},
-					"response": []
+					"Status code should be 200": true,
+					"Status code name should have an OK string": true,
+					"Confirm that the paymentCurrency is EUR": true,
+					"Body matches string": true
 				}
 			]
 		},
 		{
-			"name": "Get entry per ID",
-			"item": [
-				{
-					"name": "Get entry per ID - Valid ID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code should be 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"pm.test(\"Status code name should have an OK string\", function () {",
-									"    pm.response.to.have.status(\"OK\");",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"console.log(jsonData.paymentCurrency)",
-									"",
-									"pm.test(\"Confirm that the paymentCurrency is EUR\", function () {",
-									"    ",
-									"    pm.expect(jsonData.paymentCurrency).to.eql(\"EUR\");",
-									"});",
-									"",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"EUR\");",
-									"});",
-									"",
-									"console.log(jsonData.paymentCurrency)",
-									"console.log(jsonData.apiVersion)",
-									"",
-									"pm.environment.set(\"entityPaymentCurrency\",jsonData.paymentCurrency);",
-									"",
-									"pm.environment.set(\"entityapiVersion\",jsonData.apiVersion);",
-									"",
-									"var jsonData = pm.response.json();",
-									"console.log(jsonData)",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{baseUrl}}/index.php?todo_paymentCurrency={{entityPaymentCurrency}}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"index.php"
-							],
-							"query": [
-								{
-									"key": "todo_paymentCurrency",
-									"value": "{{entityPaymentCurrency}}"
-								}
-							]
-						},
-						"description": "https://demo.fusio-project.org/index.php/todo/:todo_id"
-					},
-					"response": []
+			"id": "09d885f9-700d-4fd5-8489-e2eba1b390b8",
+			"name": "Get entry per ID - Valid ID",
+			"url": "https://demo.fusio-project.org/index.php?=/todo/index.php?todo_paymentCurrency=EUR",
+			"time": 1069,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code name should have an OK string": true,
+				"Confirm that the paymentCurrency is EUR": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
 				},
+				"Status code name should have an OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Confirm that the paymentCurrency is EUR": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1069
+			],
+			"allTests": [
 				{
-					"name": "Get entry per ID - Invalid ID(params not using TODO ID)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code should be 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"pm.test(\"Status code name should have an OK string\", function () {",
-									"    pm.response.to.have.status(\"OK\");",
-									"});",
-									"",
-									"var jsonData = pm.response.json();",
-									"console.log(jsonData.paymentCurrency)",
-									"",
-									"pm.test(\"Confirm that the paymentCurrency is EUR\", function () {",
-									"    ",
-									"    pm.expect(jsonData.paymentCurrency).to.eql(\"EUR\");",
-									"});",
-									"",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"EUR\");",
-									"});",
-									"",
-									"console.log(jsonData.paymentCurrency)",
-									"console.log(jsonData.apiVersion)",
-									"",
-									"pm.environment.set(\"entityPaymentCurrency\",jsonData.paymentCurrency);",
-									"",
-									"pm.environment.set(\"entityapiVersion\",jsonData.apiVersion);",
-									"",
-									"var jsonData = pm.response.json();",
-									"console.log(jsonData)",
-									"",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/?todo_apiVersion={{entityapiVersion}}",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								""
-							],
-							"query": [
-								{
-									"key": "todo_apiVersion",
-									"value": "{{entityapiVersion}}"
-								}
-							]
-						},
-						"description": "https://demo.fusio-project.org/index.php/todo/:todo_id"
-					},
-					"response": []
+					"Status code should be 200": true,
+					"Status code name should have an OK string": true,
+					"Confirm that the paymentCurrency is EUR": true,
+					"Body matches string": true
 				}
 			]
 		},
 		{
-			"name": "Get Books",
-			"item": [
-				{
-					"name": "Get Books - valid book type",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code should be 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"const response = pm.response.json();",
-									"",
-									"pm.test(\"The Russian\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"The Russian\");",
-									"});",
-									"",
-									"console.log(response[1].id)",
-									"pm.environment.set(\"JustMeID\", response[1].id);",
-									"",
-									"console.log(response[0].name);",
-									"pm.test(\"Search for a book name called The Russian\", function (){",
-									"    pm.expect(response[0].name).to.equal(\"The Russian\")",
-									"});",
-									"",
-									"console.log(response[1].name);",
-									"pm.test(\"Search for a book name called Just as I Am\", function (){",
-									"    pm.expect(response[1].name).to.equal(\"Just as I Am\")",
-									"});",
-									"",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/books",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"books"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
+			"id": "d727d23d-6fda-47f6-8775-b906d3d9c315",
+			"name": "Get entry per ID - Invalid ID(params not using TODO ID)",
+			"url": "https://demo.fusio-project.org/index.php?=/todo/?todo_apiVersion=6.3.8.0",
+			"time": 332,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code name should have an OK string": true,
+				"Confirm that the paymentCurrency is EUR": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
 				},
+				"Status code name should have an OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Confirm that the paymentCurrency is EUR": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				332
+			],
+			"allTests": [
 				{
-					"name": "Get Books - invalid book type",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code should be 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"pm.test(\"Status code name should have an OK string\", function () {",
-									"    pm.response.to.have.status(\"OK\");",
-									"});",
-									"",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/books",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"books"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
+					"Status code should be 200": true,
+					"Status code name should have an OK string": true,
+					"Confirm that the paymentCurrency is EUR": true,
+					"Body matches string": true
 				}
 			]
 		},
 		{
-			"name": "Place a book order",
-			"item": [
-				{
-					"name": "Place a book order - using valid book ID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"",
-									"pm.test(\"Response time is less than 400ms\", function (){",
-									"    pm.expect(pm.response.responseTime).to.be.below(400);",
-									"});",
-									"",
-									"",
-									"",
-									"",
-									"",
-									"/**pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});*/",
-									"",
-									"",
-									"/**const OrderId = pm.response.json(); ",
-									"",
-									"console.log(OrderId.orderId);",
-									"pm.environment.set(\"OrderId\", OrderId.orderId);",
-									"*/",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"bookId\": {{JustMeID}}\n    \"customerName\": \"Aliyu\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
+			"id": "e2668818-5317-426f-a6b8-0daf75b9d4cd",
+			"name": "Get Books - valid book type",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 5669,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"The Russian": true,
+				"Search for a book name called The Russian": true,
+				"Search for a book name called Just as I Am": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
 				},
-				{
-					"name": "Place a book order - using invalid book ID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"",
-									"",
-									"pm.test(\"Response time is less than 400ms\", function (){",
-									"    pm.expect(pm.response.responseTime).to.be.below(400);",
-									"});",
-									"",
-									"",
-									"/**pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});*/",
-									"",
-									"",
-									"/**const OrderId = pm.response.json(); ",
-									"",
-									"console.log(OrderId.orderId);",
-									"pm.environment.set(\"OrderId\", OrderId.orderId);",
-									"*/",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "4ffca71810c563450a6bf01d67e1ffd6925b9e0393b721fc6e26ed0ee39d54c5",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders?orderId={{OrderId}}",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders"
-							],
-							"query": [
-								{
-									"key": "orderId",
-									"value": "{{OrderId}}"
-								}
-							]
-						}
-					},
-					"response": []
+				"The Russian": {
+					"pass": 1,
+					"fail": 0
 				},
+				"Search for a book name called The Russian": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search for a book name called Just as I Am": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5669
+			],
+			"allTests": [
 				{
-					"name": "Place a book order - using no book ID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "4ffca71810c563450a6bf01d67e1ffd6925b9e0393b721fc6e26ed0ee39d54c5",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": null,
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
+					"Status code should be 200": true,
+					"The Russian": true,
+					"Search for a book name called The Russian": true,
+					"Search for a book name called Just as I Am": true
 				}
 			]
 		},
 		{
-			"name": "Get an order",
-			"item": [
-				{
-					"name": "Get all orders",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "4ffca71810c563450a6bf01d67e1ffd6925b9e0393b721fc6e26ed0ee39d54c5",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
+			"id": "6ca89c13-7ec1-4a55-a5e5-3c328f79d44a",
+			"name": "Get Books - invalid book type",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 258,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code name should have an OK string": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
 				},
+				"Status code name should have an OK string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				258
+			],
+			"allTests": [
 				{
-					"name": "Get an order - using a valid order number",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "4ffca71810c563450a6bf01d67e1ffd6925b9e0393b721fc6e26ed0ee39d54c5",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders/:orderId",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders",
-								":orderId"
-							],
-							"variable": [
-								{
-									"key": "orderId",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get an order - using an invalid order number",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "4ffca71810c563450a6bf01d67e1ffd6925b9e0393b721fc6e26ed0ee39d54c5",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders/:orderId",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders",
-								":orderId"
-							],
-							"variable": [
-								{
-									"key": "orderId",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get an order - using no order ID",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "03c5abfe090876ab74a2a2ac4c079174a35fd88c9b88cd2164ff4b9d56c31d6c",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders/:orderId",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders",
-								":orderId"
-							],
-							"variable": [
-								{
-									"key": "orderId",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
+					"Status code should be 200": true,
+					"Status code name should have an OK string": true
 				}
 			]
 		},
 		{
-			"name": "Delete an order",
-			"item": [
-				{
-					"name": "Delete an order - using invalid order ID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "4ffca71810c563450a6bf01d67e1ffd6925b9e0393b721fc6e26ed0ee39d54c5",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders/:orderId",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders",
-								":orderId"
-							],
-							"variable": [
-								{
-									"key": "orderId",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete an order - using no order ID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "4ffca71810c563450a6bf01d67e1ffd6925b9e0393b721fc6e26ed0ee39d54c5",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders/:orderId",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders",
-								":orderId"
-							],
-							"variable": [
-								{
-									"key": "orderId",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete an order - using valid order ID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "4ffca71810c563450a6bf01d67e1ffd6925b9e0393b721fc6e26ed0ee39d54c5",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrlBook}}/orders/:orderId",
-							"host": [
-								"{{baseUrlBook}}"
-							],
-							"path": [
-								"orders",
-								":orderId"
-							],
-							"variable": [
-								{
-									"key": "orderId",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
+			"id": "7491e92f-83a6-4173-87a0-df449da8c2d6",
+			"name": "Place a book order - using valid book ID",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 346,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {
+				"Response time is less than 400ms": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
 				}
+			},
+			"times": [
+				346
+			],
+			"allTests": [
+				{
+					"Response time is less than 400ms": true
+				}
+			]
+		},
+		{
+			"id": "73c62dd8-d7d0-4645-90da-29ac02ba3a35",
+			"name": "Place a book order - using invalid book ID",
+			"url": "https://simple-books-api.glitch.me/orders?orderId={{OrderId}}",
+			"time": 264,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response time is less than 400ms": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				264
+			],
+			"allTests": [
+				{
+					"Response time is less than 400ms": true
+				}
+			]
+		},
+		{
+			"id": "fd946f93-31cc-4692-b4f9-36f2006320df",
+			"name": "Place a book order - using no book ID",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 252,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				252
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "013f2a0a-4d3d-4e60-9900-83d0efcfeedc",
+			"name": "Get all orders",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 256,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				256
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0fb6b1c9-3f80-49a8-8a7b-4e8ddbaea034",
+			"name": "Get an order - using a valid order number",
+			"url": "https://simple-books-api.glitch.me/orders/:orderId",
+			"time": 448,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				448
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f159536a-961b-49dd-bdff-fbb2e2c8824c",
+			"name": "Get an order - using an invalid order number",
+			"url": "https://simple-books-api.glitch.me/orders/:orderId",
+			"time": 274,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				274
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c2e4782c-7bd0-4f27-90b7-47d669cce9f5",
+			"name": "Get an order - using no order ID",
+			"url": "https://simple-books-api.glitch.me/orders/:orderId",
+			"time": 318,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				318
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0a55c077-6159-4089-ac1d-b47ec237e6bb",
+			"name": "Delete an order - using invalid order ID",
+			"url": "https://simple-books-api.glitch.me/orders/:orderId",
+			"time": 255,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				255
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d59cc13f-e416-4adc-a0d2-87654a9ce2fb",
+			"name": "Delete an order - using no order ID",
+			"url": "https://simple-books-api.glitch.me/orders/:orderId",
+			"time": 260,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				260
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e0745364-72fc-4244-a633-a13da1b0eea6",
+			"name": "Delete an order - using valid order ID",
+			"url": "https://simple-books-api.glitch.me/orders/:orderId",
+			"time": 233,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				233
+			],
+			"allTests": [
+				{}
 			]
 		}
-	]
+	],
+	"count": 1,
+	"totalTime": 12946,
+	"collection": {
+		"requests": [
+			{
+				"id": "1c52d635-6c94-4d6d-b2e9-56ffa9694833",
+				"method": "GET"
+			},
+			{
+				"id": "12386378-b1eb-4e58-8127-22c74f6cf737",
+				"method": "GET"
+			},
+			{
+				"id": "09d885f9-700d-4fd5-8489-e2eba1b390b8",
+				"method": "GET"
+			},
+			{
+				"id": "d727d23d-6fda-47f6-8775-b906d3d9c315",
+				"method": "GET"
+			},
+			{
+				"id": "e2668818-5317-426f-a6b8-0daf75b9d4cd",
+				"method": "GET"
+			},
+			{
+				"id": "6ca89c13-7ec1-4a55-a5e5-3c328f79d44a",
+				"method": "GET"
+			},
+			{
+				"id": "7491e92f-83a6-4173-87a0-df449da8c2d6",
+				"method": "POST"
+			},
+			{
+				"id": "73c62dd8-d7d0-4645-90da-29ac02ba3a35",
+				"method": "POST"
+			},
+			{
+				"id": "fd946f93-31cc-4692-b4f9-36f2006320df",
+				"method": "POST"
+			},
+			{
+				"id": "013f2a0a-4d3d-4e60-9900-83d0efcfeedc",
+				"method": "GET"
+			},
+			{
+				"id": "0fb6b1c9-3f80-49a8-8a7b-4e8ddbaea034",
+				"method": "GET"
+			},
+			{
+				"id": "f159536a-961b-49dd-bdff-fbb2e2c8824c",
+				"method": "GET"
+			},
+			{
+				"id": "c2e4782c-7bd0-4f27-90b7-47d669cce9f5",
+				"method": "GET"
+			},
+			{
+				"id": "0a55c077-6159-4089-ac1d-b47ec237e6bb",
+				"method": "DELETE"
+			},
+			{
+				"id": "d59cc13f-e416-4adc-a0d2-87654a9ce2fb",
+				"method": "DELETE"
+			},
+			{
+				"id": "e0745364-72fc-4244-a633-a13da1b0eea6",
+				"method": "DELETE"
+			}
+		]
+	}
 }
